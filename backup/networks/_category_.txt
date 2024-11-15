@@ -1,0 +1,8 @@
+{
+  "label": "Networks",
+  "position": 2,
+  "link": {
+    "type": "generated-index",
+    "description": "Elysium has two types of endpoints available for users to connect to: one for HTTPS and one for WSS for both (Mainnet or Testnet)"
+  }
+}

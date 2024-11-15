@@ -1,0 +1,8 @@
+{
+  "label": "Ethereum API",
+  "position": 3,
+  "link": {
+    "type": "generated-index",
+    "description": "Polkadot's Substrate is an open-source, modular SDK for building blockchains in Rust. It is developed by Parity Technologies, the same team behind Polkadot.\n\nWhere Polkadot is a chain through which many blockchains are connected to, Substrate is the toolset that Elysium uses that provides the foundational building blocks for creating custom, domain-specific blockchains. Substrate's FRAME framework is designed to be flexible and forkless, allowing developers to choose the components that best suit their blockchain needs and perform runtime upgrades without requiring network forks like Ethereum does. Most developers will gravitate towards Substrate with the intention of integrating with the Polkadot ecosystem, but its flexibility allows users to create both solo-chains and parachains"
+  }
+}

@@ -1,0 +1,8 @@
+{
+  "label": "Dev Environments",
+  "position": 2,
+  "link": {
+    "type": "generated-index",
+    "description": "Ethereum development environment that helps developers manage and automate the recurring tasks inherent to building smart contracts and DApps."
+  }
+}

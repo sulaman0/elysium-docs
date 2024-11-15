@@ -1,0 +1,11 @@
+<svg id="how_it_works" data-name="how it works" xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 22 22">
+  <g id="Group_25233" data-name="Group 25233" transform="translate(15.752 13.523)">
+    <path id="Path_49941" data-name="Path 49941" d="M366.649,364.636h1.289v3.3h-1.289Z" transform="translate(-366.647 -362.491)" fill="#fff"/>
+    <path id="Path_49942" data-name="Path 49942" d="M367.247,316a.645.645,0,1,0-.645-.645A.652.652,0,0,0,367.247,316Z" transform="translate(-366.602 -314.712)" fill="#fff"/>
+  </g>
+  <g id="Group_25234" data-name="Group 25234" transform="translate(0)">
+    <path id="Path_49943" data-name="Path 49943" d="M17.535,10.964V0H2.833A2.8,2.8,0,0,0,0,2.8V19.251H.014A3.036,3.036,0,0,0,3.032,22H16.406a5.574,5.574,0,0,0,1.13-11.036Zm-1.291-.112a5.6,5.6,0,0,0-5.409,5.084H5.184V1.254h11.06ZM2.833,1.254h1.06V15.936H3.032a3.014,3.014,0,0,0-1.741.552V2.8A1.543,1.543,0,0,1,2.833,1.254Zm.2,19.455a1.741,1.741,0,1,1,0-3.482h7.835a5.547,5.547,0,0,0,.273,1.1l.665,1.291a5.64,5.64,0,0,0,.986,1.088H3.032Zm13.374.037a4.3,4.3,0,1,1,4.3-4.3A4.308,4.308,0,0,1,16.406,20.746Z" transform="translate(0)" fill="#fff"/>
+    <path id="Path_49944" data-name="Path 49944" d="M200.8,87.6h4.321v1.291H200.8Z" transform="translate(-192.168 -83.836)" fill="#fff"/>
+    <path id="Path_49945" data-name="Path 49945" d="M166.828,152.831h7.24v1.291h-7.24Z" transform="translate(-159.66 -146.264)" fill="#fff"/>
+  </g>
+</svg>

@@ -1,0 +1,8 @@
+{
+  "label": "Substrate API",
+  "position": 3,
+  "link": {
+    "type": "generated-index",
+    "description": "Elysium APIs allows applications to access blocks, account balance, and other information of Substrate-based blockchains through a REST API."
+  }
+}

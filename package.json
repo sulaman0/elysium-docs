@@ -1,0 +1,59 @@
+{
+  "name": "my-website",
+  "version": "0.0.0",
+  "private": true,
+  "scripts": {
+    "docusaurus": "docusaurus",
+    "start": "docusaurus start",
+    "build": "docusaurus build",
+    "swizzle": "docusaurus swizzle",
+    "deploy": "docusaurus deploy",
+    "clear": "docusaurus clear",
+    "serve": "docusaurus serve",
+    "write-translations": "docusaurus write-translations",
+    "write-heading-ids": "docusaurus write-heading-ids"
+  },
+  "dependencies": {
+    "@docsearch/css": "^3.5.0",
+    "@docusaurus/core": "^3.4.0",
+    "@docusaurus/plugin-google-analytics": "^3.4.0",
+    "@docusaurus/plugin-sitemap": "^3.4.0",
+    "@docusaurus/preset-classic": "3.4.0",
+    "@docusaurus/theme-search-algolia": "^3.4.0",
+    "@mdx-js/react": "^3.0.0",
+    "@types/react-instantsearch-dom": "^6.12.3",
+    "axios": "^1.4.0",
+    "bootstrap": "^5.3.0",
+    "clsx": "^1.2.1",
+    "ethers": "^6.6.0",
+    "prism-react-renderer": "^2.3.0",
+    "react": "^18.0.0",
+    "react-dom": "^18.0.0",
+    "react-instantsearch": "^6.40.0",
+    "react-instantsearch-dom": "^6.40.0",
+    "react-instantsearch-hooks-web": "^6.44.2",
+    "reactstrap": "^9.1.10",
+    "sass": "^1.62.1",
+    "solc": "^0.8.0",
+    "typesense": "^1.5.4",
+    "typesense-instantsearch-adapter": "^2.7.0"
+  },
+  "devDependencies": {
+    "@docusaurus/module-type-aliases": "3.0.0"
+  },
+  "browserslist": {
+    "production": [
+      ">0.5%",
+      "not dead",
+      "not op_mini all"
+    ],
+    "development": [
+      "last 1 chrome version",
+      "last 1 firefox version",
+      "last 1 safari version"
+    ]
+  },
+  "engines": {
+    "node": ">=18.0"
+  }
+}

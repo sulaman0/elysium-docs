@@ -1,0 +1,8 @@
+{
+  "label": "Bridge",
+  "position": 9,
+  "link": {
+    "type": "generated-index",
+    "description": "Elysium's innovative bridge connects networks, enabling frictionless movement of assets between Polygon and Elysium, enhancing cross-chain DeFi capabilities"
+  }
+}
