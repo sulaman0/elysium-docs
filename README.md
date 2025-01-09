@@ -14,8 +14,8 @@ To get started developing on Elysium, it’s important to be aware of the variou
 
 | Network  | Network Type | Native Asset Symbol | Native Asset Decimals |
 |----------|--------------|---------------------|-----------------------|
-| Atlantis | Testnet      | LAVA                | 18                    |
-| Elysium  | Mainnet      | LAVA                | 18                    |
+| Atlantis | Testnet      | ELY                 | 18                    |
+| Elysium  | Mainnet      | ELY                 | 18                    |
 
 ### Network Configurations
 
@@ -59,17 +59,17 @@ via the Ethereum API. For more information on each explorer, please check out th
 
 ## Funding Accounts
 
-To get started developing on Atlantis (Testnet), you’ll need to fund your account with LAVA tokens to send
+To get started developing on Atlantis (Testnet), you’ll need to fund your account with ELY tokens to send
 transactions.
-Please note that LAVA tokens have no real value and are for testing purposes only.
+Please note that ELY tokens have no real value and are for testing purposes only.
 
 Mainnet tokens are only available for those people who are using Bridge & have moved their assets from other chains to
 Elysium using Elysium Bridge (https://bridge.elysiumchain.tech/).
 
-| Network  | URL	                                                                                          | 
-|----------|-----------------------------------------------------------------------------------------------|
-| Atlantis | The https://faucet.atlantischain.network/ website. The faucet dispenses 1 LAVA every 24 hours | 
-| Elysium  | The https://faucet.elysiumchain.tech/ website. The faucet dispenses 3 LAVA                    |
+| Network  | URL	                                                                                            | 
+|----------|-------------------------------------------------------------------------------------------------|
+| Atlantis | The https://faucet.atlantischain.network/ website. The faucet dispenses 1 ELY every 24 hours    | 
+| Elysium  | The https://faucet.elysiumchain.tech/ website. The faucet dispenses 3 ELY                       |
 
 ## Development Tools
 

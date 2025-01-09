@@ -151,7 +151,7 @@ and then enter them in the input fields for each of the keys (aura, grandpa, imo
 ![A sync-in-progress chain connected to Polkadot-JS UI](img/set-keys.png)
 
 Please make sure to select newly generated substrate Account from [Previous Section](#generate-a-new-account-key)  
-For sending Transaction your newly generated account must have some lava to pay for gas fee. 
+For sending Transaction your newly generated account must have some ELY to pay for gas fee. 
 
 You can use the below docker command to add session keys directly:
 ```bash

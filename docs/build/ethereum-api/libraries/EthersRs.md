@@ -19,7 +19,7 @@ In this guide, you'll learn how to use the Ethers.rs library to send a transacti
 
 For the examples in this guide, you will need to have the following:
 
-- An account with funds. You can get LAVA for testing on once every 24 hours
+- An account with funds. You can get ELY for testing on once every 24 hours
   from [Elysium Faucet](https://faucet.atlantischain.network/ )
 - To test out the examples in this guide on Elysium, you will need to have your own endpoint and API key,
   which you can get from one of the supported [Endpoint Providers](/docs/network-endpoints).
@@ -191,7 +191,7 @@ async fn main() -> Result<(), Box<dyn std::error::Error>> {
 
 ### Send Transaction Script
 
-For this example, you'll be transferring 1 LAVA from an origin address (of which you hold the private key) to another
+For this example, you'll be transferring 1 ELY from an origin address (of which you hold the private key) to another
 address.
 
 1. Create a new asynchronous function named `send_transaction` that takes a client object's reference and the sending

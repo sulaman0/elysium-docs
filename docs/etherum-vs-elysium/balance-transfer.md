@@ -5,7 +5,7 @@ sidebar_position: 6
 # Balance Transfers
 
 While Elysium strives to be compatible with Ethereum’s Web3 API and EVM, there are some important Elysium differences
-that developers should know and understand in terms of balance transfers of the base network token (for example, LAVA).
+that developers should know and understand in terms of balance transfers of the base network token (for example, ELY).
 
 Token holders have two ways of initiating a balance transfer on Elysium. On one hand, users can use the Ethereum API via
 apps like MetaMask, MathWallet, or any other tools that use the Ethereum JSON-RPC. On the other hand, users can use the
@@ -77,7 +77,7 @@ about Polkadot.js and the Substrate JSON RPC in their official documentation sit
 ```typescript
 import { ApiPromise, WsProvider } from "@polkadot/api";
 
-// This script will listen to all LAVA transfers (Substrate & Ethereum) and extract the tx hash
+// This script will listen to all ELY transfers (Substrate & Ethereum) and extract the tx hash
 // It can be adapted for Elysium
 
 const main = async () => {

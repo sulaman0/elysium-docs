@@ -17,7 +17,7 @@ guide can be adapted for [Elysium](/docs/network-endpoints)
 
 For the examples in this guide, you will need to have the following:
 
-- An account with funds. You can get LAVA for testing on once every 24 hours
+- An account with funds. You can get ELY for testing on once every 24 hours
   from [Elysium Faucet](https://faucet.atlantischain.network/ )
 - To test out the examples in this guide on Elysium, you will need to have your own endpoint and API key,
   which you can get from one of the supported [Endpoint Providers](/docs/network-endpoints).

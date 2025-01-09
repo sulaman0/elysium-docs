@@ -18,7 +18,7 @@ Testnet. This guide can be adapted for [Elysium](/docs/network-endpoints)
 
 For the examples in this guide, you will need to have the following:
 
-- An account with funds. You can get LAVA for testing on once every 24 hours
+- An account with funds. You can get ELY for testing on once every 24 hours
   from [Elysium Faucet](https://faucet.atlantischain.network/ )
 - To test out the examples in this guide on Atlantis, you will need to have your own endpoint and API key,
   which you can get from one of the supported [Endpoint Providers](/docs/network-endpoints).
@@ -134,7 +134,7 @@ If successful, the balances for the origin and receiving address will be display
 
 ### Send Transaction Script
 
-You'll only need one file for executing a transaction between accounts. For this example, you'll be transferring 1 LAVA
+You'll only need one file for executing a transaction between accounts. For this example, you'll be transferring 1 ELY
 from an origin address (from which you hold the private key) to another address. To get started, you can create
 a `transaction.js` file by running:
 

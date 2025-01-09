@@ -29,7 +29,7 @@ node and have transferred some funds to metamask account.
 If you're adapting this guide for Elysium make sure you are connected to the correct network and have an account with
 funds.
 
-- An account with funds. You can get LAVA for testing on once every 24 hours
+- An account with funds. You can get ELY for testing on once every 24 hours
   from [Elysium Faucet](https://faucet.atlantischain.network/ )
 
 ## Getting Started with Remix

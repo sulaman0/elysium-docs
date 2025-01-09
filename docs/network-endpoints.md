@@ -76,10 +76,10 @@ documentation.
 
 ## Get Tokens
 
-To start building on Elysium, you can get LAVA from the [Elysium Faucet](https://faucet.atlantischain.network/). For specific amounts, you can always reach
+To start building on Elysium, you can get ELY from the [Elysium Faucet](https://faucet.atlantischain.network/). For specific amounts, you can always reach
 out directly to us via our community channels.
 
-To request LAVA tokens from the faucet, you can enter your address on the [Elysium Faucet](https://faucet.atlantischain.network/).
+To request ELY tokens from the faucet, you can enter your address on the [Elysium Faucet](https://faucet.atlantischain.network/).
 
 > **_NOTE:_**  
 > Elysium Testnet tokens have no value. Please don’t spam the faucet with unnecessary requests.
