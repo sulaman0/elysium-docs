@@ -37,40 +37,18 @@ jobs:
       - name: Get latest release tag
         id: get_version
         run: |
-          # latest_tag=$(curl -s https://api.github.com/repos/${{ github.repository }}/tags | jq -r '.[0].name' | sed 's/^v//')
-          # if [[ -z "$latest_tag" ]]; then
-          #   echo "v0" > version.txt
-          # else
-          #   new_version=$((latest_tag + 1))
-          #   echo "v$new_version" > version.txt
-          # fi
-          # echo "Version to tag: $(cat version.txt)"
-          # echo "VERSION=$(cat version.txt)" >> $GITHUB_ENV
+          # Fetch the latest tag from the repository
+          latest_tag=$(curl -s https://api.github.com/repos/${{ github.repository }}/tags | jq -r '.[0].name' | sed 's/^v//')
 
-          # Check if version.txt exists and read the latest version
-          if [[ -f version.txt ]]; then
-            latest_version=$(cat version.txt)
+          # If no tag exists, start at version 1
+          if [[ -z "$latest_tag" ]]; then
+            new_version=1
           else
-            # If version.txt doesn't exist, start with v0
-            latest_version=1
+            new_version=$((latest_tag + 1))
           fi
-      
-          # Check if version.txt exists and read the latest version
-          if [[ -f version.txt ]]; then
-            latest_version=$(cat version.txt)
-          else
-            # If version.txt doesn't exist, start with 1
-            latest_version="0"
-          fi
-      
-          # Increment the version
-          new_version=$((latest_version + 1))
-      
-          # Save the new version in version.txt
-          echo $new_version > version.txt
-      
-          # Output the new version and set it as an environment variable
-          echo "Version to tag: $new_version"
+
+          # Save the new version in the environment
+          echo "New version to tag: $new_version"
           echo "VERSION=$new_version" >> $GITHUB_ENV
       
       # This step uses [docker/metadata-action](https://github.com/docker/metadata-action#about) to extract tags and labels that will be applied to the specified image. The `id` "meta" allows the output of this step to be referenced in a subsequent step. The `images` value provides the base name for the tags and labels.
