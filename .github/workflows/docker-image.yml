@@ -42,9 +42,9 @@ jobs:
 
           # If no tag exists, start at version 1
           if [[ -z "$latest_tag" ]]; then
-            new_version=1
+            new_version=1.0.0
           else
-            new_version=$((latest_tag + 1))
+            new_version=$((latest_tag))
           fi
 
           # Save the new version in the environment
