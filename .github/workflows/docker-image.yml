@@ -3,7 +3,7 @@ name: Publish Github Container Image
 on:
   push:
     branches:
-      - main  # Publish on push to the main branch
+      - master  # Publish on push to the main branch
     tags:
       - 'v*'  # Optionally publish on version tags
 
