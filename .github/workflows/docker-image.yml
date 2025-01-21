@@ -42,17 +42,18 @@ jobs:
           latest_tag=$(curl -H "Authorization: token ${{ secrets.GITHUB_TOKEN }}" \
           https://api.github.com/users/sulaman0/packages/container/elysium-docs/versions | \
           jq -r '.[0].metadata.container.tags[0]')
-
-          echo $latest_tag
-          echo "latest tag"
-          # # If no tags exist, output an error and exit
-          # if [[ -z "$latest_tag" || "$latest_tag" == "null" ]]; then
-          #   echo "No tags found in the container registry."
-          #   exit 1
-          # fi
           
-          # echo "Using the latest tag: $latest_tag"
-          # echo "VERSION=$latest_tag" >> $GITHUB_ENV
+          # If no tags exist, output an error and exit
+          if [[ -z "$latest_tag" || "$latest_tag" == "null" ]]; then
+            echo "No tags found in the container registry."
+            new_version=1
+          else
+            new_version=$((latest_tag + 1))
+          fi
+          
+          echo "Using the latest tag: $latest_tag"
+          echo "Using the new version tag: $new_version"
+          echo "VERSION=$new_version" >> $GITHUB_ENV
       
       # This step uses [docker/metadata-action](https://github.com/docker/metadata-action#about) to extract tags and labels that will be applied to the specified image. The `id` "meta" allows the output of this step to be referenced in a subsequent step. The `images` value provides the base name for the tags and labels.
       - name: Extract metadata (tags, labels) for Docker
@@ -60,7 +61,7 @@ jobs:
         uses: docker/metadata-action@9ec57ed1fcdbf14dcef7dfbe97b2010124a938b7
         with:
           images: ${{ env.REGISTRY }}/${{ env.IMAGE_NAME }}
-          tags: '4'
+          tags: '${{ env.VERSION }}'
       
       # This step uses the `docker/build-push-action` action to build the image, based on your repository's `Dockerfile`. If the build succeeds, it pushes the image to GitHub Packages.
       # It uses the `context` parameter to define the build's context as the set of files located in the specified path. For more information, see [Usage](https://github.com/docker/build-push-action#usage) in the README of the `docker/build-push-action` repository.
@@ -72,7 +73,7 @@ jobs:
           context: .
           push: true
           #tags: ${{ steps.meta.outputs.tags }}
-          tags: ${{ env.REGISTRY }}/${{ env.IMAGE_NAME }}:4
+          tags: ${{ env.REGISTRY }}/${{ env.IMAGE_NAME }}:${{ env.VERSION }}
           labels: ${{ steps.meta.outputs.labels }}
           outputs: type=registry,push=true,visibility=public
       
@@ -80,7 +81,7 @@ jobs:
       # - name: Generate artifact attestation
       #   uses: actions/attest-build-provenance@v2
       #   with:
-      #     subject-name: ${{ env.REGISTRY }}/${{ env.IMAGE_NAME}}:4
+      #     subject-name: ${{ env.REGISTRY }}/${{ env.IMAGE_NAME}}:${{ env.VERSION }}
       #     subject-digest: ${{ steps.push.outputs.digest }}
       #     push-to-registry: true
       
