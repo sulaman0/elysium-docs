@@ -1,37 +1,32 @@
-name: Docker Image CI
+name: Publish Github Container Image
 
 on:
   push:
+    branches:
+      - master  # Publish on push to the main branch
     tags:
-      - 'v*'
+      - 'v*'  # Optionally publish on version tags
 
 jobs:
-  push_to_registry:
-    name: Push Docker image to Docker Hub
-    runs-on: ubuntu-20.04
-    strategy:
-      matrix:
-        node-version: [ 18.x ]
-    steps:
-      - name: Checkout
-        uses: actions/checkout@v3
-      - name: Log in to Docker Hub
-        uses: docker/login-action@v2
-        with:
-          username: ${{ secrets.DOCKER_HUB_USERNAME }}
-          password: ${{ secrets.DOCKER_HUB_ACCESS_TOKEN }}
-      - name: Extract metadata (tags, labels) for Docker
-        id: meta
-        uses: docker/metadata-action@v4
-        with:
-          images: vaival/elysium-docs
-          tags: |
-            type=semver,pattern={{version}}
+  build-and-push:
+    runs-on: ubuntu-latest
 
-      - name: Build and push Docker image
-        uses: docker/build-push-action@v3
-        with:
-          context: .
-          push: true
-          tags: ${{ steps.meta.outputs.tags }}
-          labels: ${{ steps.meta.outputs.labels }}
+    steps:
+    - name: Checkout repository
+      uses: actions/checkout@v3
+
+    - name: Log in to GitHub Container Registry
+      uses: docker/login-action@v2
+      with:
+        registry: ghcr.io
+        username: ${{ secrets.GITHUB_ACTOR }}
+        password: ${{ secrets.GITHUB_TOKEN }}
+
+    - name: Build and push Docker image
+      uses: docker/build-push-action@v4
+      with:
+        context: .
+        push: true
+        tags: |
+          ghcr.io/${{ github.repository_owner }}/${{ github.event.repository.name }}:latest
+          ghcr.io/${{ github.repository_owner }}/${{ github.event.repository.name }}:${{ github.ref_name }}
