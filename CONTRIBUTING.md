@@ -39,8 +39,6 @@ Some important things to note:
 
 Both, **Canonical Contracts** and **Contract Addresses** are displayed in the left side navigation menu and on the landing page. The **Precompiled Contracts** title, comes from the `title` of the [`.pages` file for the `precompiles` subdirectory](https://github.com/moonbeam-foundation/moonbeam-docs/blob/master/builders/ethereum/precompiles/.pages).
 
-![Display titles](/images/readme-contributing/contributing-1.webp)
-
 ### Example `index.md` file
 
 Below is an example of the [Canonical Contracts](https://docs.moonbeam.network/builders/ethereum/canonical-contracts/) `index.md` file: 
@@ -63,8 +61,6 @@ Some important things to note:
 - The `<div>` is populated with links to any pages or subdirectories and is populated automatically by a script at runtime that builds the landing pages
 
 The **Canonical Contracts** landing page is rendered and retrieves the `title`s from the `.pages` files.
-
-![Landing page](/images/readme-contributing/contributing-2.webp)
 
 ## Content Pages
 
@@ -89,9 +85,6 @@ description: Description for SEO purposes.
 ---
 
 # Page Title
-
-![Banner Image](/images/<subdirectory>/<project>-banner.webp)
-
 ## Introduction
 
 Write 2-3 paragraphs to serve as the introduction here.
