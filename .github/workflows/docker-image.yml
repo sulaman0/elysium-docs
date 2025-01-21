@@ -1,39 +1,3 @@
-# name: Publish Github Container Image
-
-# on:
-#   push:
-#     branches:
-#       - master  # Publish on push to the main branch
-#     tags:
-#       - 'v*'  # Optionally publish on version tags
-
-# jobs:
-#   build-and-push:
-#     runs-on: ubuntu-latest
-
-#     steps:
-#     - name: Checkout repository
-#       uses: actions/checkout@v3
-
-#     - name: Log in to GitHub Container Registry
-#       uses: docker/login-action@v2
-#       with:
-#         registry: ghcr.io
-#         username: ${{ secrets.ACTOR }}
-#         password: ${{ secrets.TOKEN }}
-
-#     - name: Build and push Docker image
-#       uses: docker/build-push-action@v4
-#       with:
-#         context: .
-#         push: true
-#         tags: |
-#           ghcr.io/${{ github.repository_owner }}/${{ github.event.repository.name }}:latest
-#           ghcr.io/${{ github.repository_owner }}/${{ github.event.repository.name }}:${{ github.ref_name }}
-
-
-
-
 #
 name: Create and publish a Docker image
 
@@ -85,6 +49,7 @@ jobs:
           push: true
           tags: ${{ steps.meta.outputs.tags }}
           labels: ${{ steps.meta.outputs.labels }}
+          outputs: type=registry,push=true,visibility=public
       
       # This step generates an artifact attestation for the image, which is an unforgeable statement about where and how it was built. It increases supply chain security for people who consume the image. For more information, see [AUTOTITLE](/actions/security-guides/using-artifact-attestations-to-establish-provenance-for-builds). 
       - name: Generate artifact attestation
