@@ -37,10 +37,12 @@ jobs:
       - name: Get latest release tag
         id: get_version
         run: |
+          OWNER="${{ github.repository_owner }}"
+          REPO="${{ github.event.repository.name }}"
           
           # Fetch the latest image tag from GitHub Container Registry (ghcr.io)
           latest_tag=$(curl -H "Authorization: token ${{ secrets.GITHUB_TOKEN }}" \
-          https://api.github.com/users/sulaman0/packages/container/elysium-docs/versions | \
+          https://api.github.com/users/$OWNER/packages/container/$REPO/versions | \
           jq -r '.[0].metadata.container.tags[0]')
           
           # If no tags exist, output an error and exit
