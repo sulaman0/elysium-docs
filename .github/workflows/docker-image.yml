@@ -37,15 +37,40 @@ jobs:
       - name: Get latest release tag
         id: get_version
         run: |
-          latest_tag=$(curl -s https://api.github.com/repos/${{ github.repository }}/tags | jq -r '.[0].name' | sed 's/^v//')
-          if [[ -z "$latest_tag" ]]; then
-            echo "v0" > version.txt
+          # latest_tag=$(curl -s https://api.github.com/repos/${{ github.repository }}/tags | jq -r '.[0].name' | sed 's/^v//')
+          # if [[ -z "$latest_tag" ]]; then
+          #   echo "v0" > version.txt
+          # else
+          #   new_version=$((latest_tag + 1))
+          #   echo "v$new_version" > version.txt
+          # fi
+          # echo "Version to tag: $(cat version.txt)"
+          # echo "VERSION=$(cat version.txt)" >> $GITHUB_ENV
+
+          # Check if version.txt exists and read the latest version
+          if [[ -f version.txt ]]; then
+            latest_version=$(cat version.txt)
           else
-            new_version=$((latest_tag + 1))
-            echo "v$new_version" > version.txt
+            # If version.txt doesn't exist, start with v0
+            latest_version="v0"
           fi
-          echo "Version to tag: $(cat version.txt)"
-          echo "VERSION=$(cat version.txt)" >> $GITHUB_ENV
+      
+          # Extract the numeric part of the version (major.minor.patch)
+          version_number=$(echo $latest_version | sed 's/^v//')
+          IFS='.' read -r major minor patch <<< "$version_number"
+      
+          # Increment the patch version
+          patch=$((patch + 1))
+      
+          # Combine the version back
+          new_version="v${major}.${minor}.${patch}"
+      
+          # Save the new version in version.txt
+          echo $new_version > version.txt
+      
+          # Output the new version and set it as an environment variable
+          echo "Version to tag: $new_version"
+          echo "VERSION=$new_version" >> $GITHUB_ENV
       
       # This step uses [docker/metadata-action](https://github.com/docker/metadata-action#about) to extract tags and labels that will be applied to the specified image. The `id` "meta" allows the output of this step to be referenced in a subsequent step. The `images` value provides the base name for the tags and labels.
       - name: Extract metadata (tags, labels) for Docker
