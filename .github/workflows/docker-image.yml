@@ -52,18 +52,19 @@ jobs:
             latest_version=$(cat version.txt)
           else
             # If version.txt doesn't exist, start with v0
-            latest_version="v0"
+            latest_version=1
           fi
       
-          # Extract the numeric part of the version (major.minor.patch)
-          version_number=$(echo $latest_version | sed 's/^v//')
-          IFS='.' read -r major minor patch <<< "$version_number"
+          # Check if version.txt exists and read the latest version
+          if [[ -f version.txt ]]; then
+            latest_version=$(cat version.txt)
+          else
+            # If version.txt doesn't exist, start with 1
+            latest_version="0"
+          fi
       
-          # Increment the patch version
-          patch=$((patch + 1))
-      
-          # Combine the version back
-          new_version="v${major}.${minor}.${patch}"
+          # Increment the version
+          new_version=$((latest_version + 1))
       
           # Save the new version in version.txt
           echo $new_version > version.txt
