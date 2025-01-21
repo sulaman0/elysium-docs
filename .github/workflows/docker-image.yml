@@ -68,7 +68,7 @@ jobs:
           context: .
           push: true
           #tags: ${{ steps.meta.outputs.tags }}
-          tags: ${{ env.REGISTRY }}/${{ env.IMAGE_NAME }}:1
+          tags: ${{ env.REGISTRY }}/${{ env.IMAGE_NAME }}:2
           labels: ${{ steps.meta.outputs.labels }}
           outputs: type=registry,push=true,visibility=public
       
