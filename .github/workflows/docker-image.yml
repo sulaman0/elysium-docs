@@ -37,9 +37,11 @@ jobs:
       - name: Get latest release tag
         id: get_version
         run: |
+          
           # Fetch the latest image tag from GitHub Container Registry (ghcr.io)
-          latest_tag=$(curl -H -u "Authorization: token ${{ secrets.GITHUB_TOKEN }}"  \
-            "https://api.github.com/users/${{ github.ACTOR }}/packages/container/${{ env.IMAGE_NAME }}/versions" | jq -r '.[0].metadata.container.tags[0]')
+          latest_tag=$(curl -H "Authorization: token ${{ secrets.GITHUB_TOKEN }}" \
+          https://api.github.com/users/sulaman0/packages/container/elysium-docs/versions | \
+          jq -r '.[0].metadata.container.tags[0]')
 
           echo $latest_tag
           echo "latest tag"
