@@ -127,4 +127,4 @@ Here are some resources to help you create good titles and descriptions for SEO:
 - [Google's recommendation on good titles](https://developers.google.com/search/docs/advanced/appearance/title-link?hl=en)
 - [Google's recommendation on good descriptions](https://developers.google.com/search/docs/advanced/appearance/snippet?hl=en)
 
-In general, titles should be between 50 and 60 characters and descriptions should be between 110 and 160 characters.
+In general, titles should be between 50 and 60 characters and descriptions should be between 110 and 160 characters..
