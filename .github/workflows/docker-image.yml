@@ -41,7 +41,8 @@ jobs:
           latest_tag=$(curl -H -u "Authorization: token ${{ secrets.GITHUB_TOKEN }}"  \
             "https://api.github.com/users/${{ github.ACTOR }}/packages/container/${{ env.IMAGE_NAME }}/versions" | jq -r '.[0].metadata.container.tags[0]')
 
-          echo "latest tag ${{ latest_tag }}"
+          echo $latest_tag
+          echo "latest tag"
           # # If no tags exist, output an error and exit
           # if [[ -z "$latest_tag" || "$latest_tag" == "null" ]]; then
           #   echo "No tags found in the container registry."
