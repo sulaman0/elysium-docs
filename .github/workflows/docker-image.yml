@@ -32,6 +32,21 @@ jobs:
           registry: ${{ env.REGISTRY }}
           username: ${{ github.ACTOR }}
           password: ${{ secrets.TOKEN }}
+
+      # Get the latest release tag from GitHub and increment it
+      - name: Get latest release tag
+        id: get_version
+        run: |
+          latest_tag=$(curl -s https://api.github.com/repos/${{ github.repository }}/tags | jq -r '.[0].name' | sed 's/^v//')
+          if [[ -z "$latest_tag" ]]; then
+            echo "v0" > version.txt
+          else
+            new_version=$((latest_tag + 1))
+            echo "v$new_version" > version.txt
+          fi
+          echo "Version to tag: $(cat version.txt)"
+          echo "VERSION=$(cat version.txt)" >> $GITHUB_ENV
+      
       # This step uses [docker/metadata-action](https://github.com/docker/metadata-action#about) to extract tags and labels that will be applied to the specified image. The `id` "meta" allows the output of this step to be referenced in a subsequent step. The `images` value provides the base name for the tags and labels.
       - name: Extract metadata (tags, labels) for Docker
         id: meta
