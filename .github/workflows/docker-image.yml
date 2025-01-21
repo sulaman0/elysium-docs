@@ -40,15 +40,17 @@ jobs:
           # Fetch the latest image tag from GitHub Container Registry (ghcr.io)
           latest_tag=$(curl -s -u ${{ github.actor }}:${{ secrets.GITHUB_TOKEN }} \
             "https://ghcr.io/v2/${{ github.repository }}/tags/list" | jq -r '.tags | last')
+
+          echo $latest_tag
+          echo "latest tag"
+          # # If no tags exist, output an error and exit
+          # if [[ -z "$latest_tag" || "$latest_tag" == "null" ]]; then
+          #   echo "No tags found in the container registry."
+          #   exit 1
+          # fi
           
-          # If no tags exist, output an error and exit
-          if [[ -z "$latest_tag" || "$latest_tag" == "null" ]]; then
-            echo "No tags found in the container registry."
-            exit 1
-          fi
-          
-          echo "Using the latest tag: $latest_tag"
-          echo "VERSION=$latest_tag" >> $GITHUB_ENV
+          # echo "Using the latest tag: $latest_tag"
+          # echo "VERSION=$latest_tag" >> $GITHUB_ENV
       
       # This step uses [docker/metadata-action](https://github.com/docker/metadata-action#about) to extract tags and labels that will be applied to the specified image. The `id` "meta" allows the output of this step to be referenced in a subsequent step. The `images` value provides the base name for the tags and labels.
       - name: Extract metadata (tags, labels) for Docker
