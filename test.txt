@@ -1,2 +1,1 @@
-docs/networks/elysium-chain network-endpoints links.
-
+docs/networks/elysium-chain network-endpoints links..
