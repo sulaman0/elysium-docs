@@ -42,7 +42,7 @@ jobs:
           
           # Fetch the latest image tag from GitHub Container Registry (ghcr.io)
           latest_tag=$(curl -H "Authorization: token ${{ secrets.GITHUB_TOKEN }}" \
-          https://api.github.com/users/$OWNER/packages/container/$REPO/versions | \
+          https://api.github.com/orgs/$OWNER/packages/container/$REPO/versions | \
           jq -r '.[0].metadata.container.tags[0]')
           
           # If no tags exist, output an error and exit
