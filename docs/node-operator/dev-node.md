@@ -94,7 +94,7 @@ services:
       - ./elysium-testnet-data:/data
     command: [
       "--name", "elysium-dev-node",
-      "--dev"
+      "--dev",
       "--ws-external",
       "--rpc-external",
       "--rpc-cors", "all"
