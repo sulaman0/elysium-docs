@@ -933,10 +933,9 @@ font-weight: 500;
 .comingSoon:after{
     position: absolute;
     right: -82px;
-    top: 0px;
+    top: 0;
     content: "Coming Soon";
-    padding: 2px;
-    padding-inline: 4px;
+    padding: 0 5px;
     background: #9fc13199;
     color: #fff;
     border: 1px solid #9fc131;
@@ -971,8 +970,12 @@ font-weight: 500;
     padding-block: 0.25rem;
 }
 [data-theme='dark'] .footer__item a{
-    color: #9ea5b4;
     font-size: 14px;
+}
+.FooterIcon {
+    gap: 10px;
+    display: flex;
+    align-items:center;
 }
 .copyRight{
     margin-top: 3rem;
@@ -982,19 +985,6 @@ font-weight: 500;
     position: relative;
     color: #9ea5b4;
     cursor: not-allowed;
-}
-.comingSoon:after{
-position: absolute;
-    right: -83px;
-    top: 0px;
-    content: "Coming Soon";
-    padding: 2px;
-    padding-inline: 4px;
-    background: #9fc13199;
-    color: #fff;
-   border: 1px solid #9fc131;
-    border-radius: 5px;
-    font-size: 10px;
 }
 .dropdown--hoverable{
     position: absolute!important;
