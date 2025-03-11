@@ -20,7 +20,7 @@ const config = {
 
     // GitHub pages deployment config.
     // If you aren't using GitHub pages, you don't need these.
-    organizationName: 'BloxBytes', // Usually your GitHub org/user name.
+    organizationName: 'elysium-foundation', // Usually your GitHub org/user name.
     projectName: 'elysium-docs', // Usually your repo name.
 
     onBrokenLinks: 'throw',
@@ -44,7 +44,7 @@ const config = {
                         sidebarPath: require.resolve('./sidebars.js'),
                         // Please change this to your repo.
                         // Remove this to remove the "edit this page" links.
-                        editUrl: 'https://github.com/BloxBytes/elysium-docs/tree/master/',
+                        editUrl: 'https://github.com/elysium-foundation/elysium-docs/tree/master/',
                     },
                     theme: {
                         customCss: require.resolve('./src/css/custom.css'),
