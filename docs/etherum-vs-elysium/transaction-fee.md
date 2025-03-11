@@ -114,8 +114,8 @@ The minimum gas price for each network is as follows:
 
 | Network            | Value    |
 |--------------------|----------|
-| Elysium            | 125 Gwei |
-| Atlantis (Testnet) | 0.1 Gwei |
+| Elysium            | 1.5 Gwei |
+| Atlantis (Testnet) | 1.5 Gwei |
 
 To calculate the dynamic base fee, the following calculation is used:
 
