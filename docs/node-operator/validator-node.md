@@ -97,7 +97,6 @@ services:
     ports:
       - 30333:30333 # p2p port
       - 9933:9933 # rpc port
-      - 9944:9944 # ws port
       - 9615:9615 # promethus port
     volumes:
       - ~/elysium-data:/data
@@ -106,7 +105,7 @@ services:
       "--rpc-cors", "all",
       "--unsafe-rpc-external",
       "--rpc-methods=unsafe",
-      "--unsafe-ws-external",
+      "--rpc-max-connections="
       "--prometheus-external",
       "--node-key", "your node key from subkey",
       "--chain", "/usr/local/bin/elysiumSpecRaw.json",
