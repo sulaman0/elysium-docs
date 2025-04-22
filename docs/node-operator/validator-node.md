@@ -105,7 +105,7 @@ services:
       "--rpc-cors", "all",
       "--unsafe-rpc-external",
       "--rpc-methods=unsafe",
-      "--rpc-max-connections=number of"
+      "--rpc-max-connections=number of con"
       "--prometheus-external",
       "--node-key", "your node key from subkey",
       "--chain", "/usr/local/bin/elysiumSpecRaw.json",
