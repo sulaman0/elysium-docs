@@ -198,7 +198,6 @@ You can use the following optional flags inside the docker-compose command.
 | `--unsafe-rpc-external` | Listens to all RPC interfaces. This option is the same as `--rpc-external`.
 | `--validator` | Starts the node with the authority role and enables it to actively participate in any consensus task that it can (for example, depending on availability of local keys).
 | `-V`, `--version` | Displays version information.
-| `--ws-external` | Listens to all Websocket interfaces. By default, the node only listens locally. Keep in mind that not all RPC methods are safe to be exposed publicly. You can use an RPC proxy server to filter out dangerous methods. You can use `--unsafe-ws-external` to suppress the warning if you understand the risks.
 
 ### Options
 
