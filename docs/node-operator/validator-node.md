@@ -196,7 +196,7 @@ You can use the following optional flags inside the docker-compose command.
 | `--two` | Provides a shortcut for specifying `--name Two --validator` to add session keys for `Two` to the keystore.
 | `--unsafe-pruning` | Forces the node to start with unsafe pruning settings. When running as a validator, it is highly recommended to disable state pruning (that is, archive) which is the default. The node will refuse to start as a validator if pruning is enabled unless this option is set.
 | `--unsafe-rpc-external` | Listens to all RPC interfaces. This option is the same as `--rpc-external`.
-| `--unsafe-ws-external` | Listens to
+| `--unsafe-ws-external` | 
 | `--validator` | Starts the node with the authority role and enables it to actively participate in any consensus task that it can (for example, depending on availability of local keys).
 | `-V`, `--version` | Displays version information.
 | `--ws-external` | Listens to all Websocket interfaces. By default, the node only listens locally. Keep in mind that not all RPC methods are safe to be exposed publicly. You can use an RPC proxy server to filter out dangerous methods. You can use `--unsafe-ws-external` to suppress the warning if you understand the risks.
