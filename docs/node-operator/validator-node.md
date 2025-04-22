@@ -255,7 +255,7 @@ You can use the following options inside the docker-compose command.
 | `--tracing-targets <targets>` | Sets a custom profiling filter. The syntax is the same as for logging: `<target>=<level>`.
 | `--wasm-execution <method>` | Specifies the method for executing Wasm runtime code. Valid values are `interpreted`, or `compiled`. The default is `Compiled`.
 | `--wasm-runtime-overrides <path>` | Specifies the path where local WASM runtimes are stored. These runtimes override on-chain runtimes when the version matches.
-| `--ws-max-connections <count>` | Specifies the maximum number of WS RPC server connections.
+| `--ws-max-connections <count>` | Specifies the maximum number of WS RPC server.
 | `--rpc-port <port>` | Specifies the TCP port to use for the WebSockets RPC server.
 
 As Elysium is a private chain, you need to contact with Elysium team to allow your Node's PeerID to participate as a validator and earn rewards. 
