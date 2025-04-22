@@ -97,6 +97,7 @@ services:
     ports:
       - 30333:30333 # p2p port
       - 9933:9933 # rpc port
+      - 9944:9933 # ws/rpc port
       - 9615:9615 # promethus port
     volumes:
       - ~/elysium-data:/data
