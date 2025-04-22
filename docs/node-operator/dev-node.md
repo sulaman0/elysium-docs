@@ -95,7 +95,6 @@ services:
     command: [
       "--name", "elysium-dev-node",
       "--dev",
-      "--ws-external",
       "--rpc-external",
       "--rpc-cors", "all"
     ]
